@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="md:flex md:justify-between md:items-center">
+      {/*     <div className="md:flex md:justify-between md:items-center">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,16 +18,14 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count) => count + 4)}>
           count is {count}
         </button>
-        <p>
+        <p className="text-green-500">
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p>Click on the Vite and React logos to learn more</p> */}
     </>
   );
 }
