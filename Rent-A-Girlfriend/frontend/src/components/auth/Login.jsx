@@ -21,63 +21,91 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+    // Full screen container with responsive padding
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-indigo-100 to-white p-4 sm:p-6 md:p-8">
+      {/* Card container with responsive width and padding */}
+      <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[40%] xl:max-w-[30%] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+        {/* Header section */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Welcome Back
           </h2>
+          <p className="text-gray-600 text-sm sm:text-base">
+            Please sign in to your account
+          </p>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm space-y-4">
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                required
-                value={formData.password}
-                onChange={handleChange}
-                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Enter your password"
-              />
-            </div>
+
+        {/* Form section */}
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          {/* Email input group */}
+          <div className="space-y-2">
+            <label
+              htmlFor="email"
+              className="block text-sm sm:text-base font-medium text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 text-sm sm:text-base"
+              placeholder="Enter your email"
+            />
           </div>
 
-          <div>
-            <button
-              type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+          {/* Password input group */}
+          <div className="space-y-2">
+            <label
+              htmlFor="password"
+              className="block text-sm sm:text-base font-medium text-gray-700"
             >
-              Sign in
-            </button>
+              Password
+            </label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 text-sm sm:text-base"
+              placeholder="Enter your password"
+            />
           </div>
+
+          {/* Remember me and forgot password */}
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center">
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-gray-700">
+                Remember me
+              </label>
+            </div>
+            <a href="#" className="text-indigo-600 hover:text-indigo-500">
+              Forgot password?
+            </a>
+          </div>
+
+          {/* Submit button */}
+          <button
+            type="submit"
+            className="w-full py-3 px-4 border border-transparent rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 text-sm sm:text-base font-medium"
+          >
+            Sign in
+          </button>
         </form>
-        <p className="mt-4 text-center text-sm text-gray-600">
+
+        {/* Sign up link */}
+        <p className="mt-8 text-center text-sm sm:text-base text-gray-600">
           Don't have an account?{" "}
           <a
             href="/signup"
