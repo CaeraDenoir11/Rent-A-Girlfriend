@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Login from "../frontend/src/components/auth/Login";
+import Login from "./assets/frontend/Login";
 
 function App() {
   return (
