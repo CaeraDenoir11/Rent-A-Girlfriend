@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     // Full screen container with responsive padding
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-indigo-100 to-white p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-700 to-zinc-900 p-4 sm:p-6 md:p-8">
       {/* Card container with responsive width and padding */}
       <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[40%] xl:max-w-[30%] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
         {/* Header section */}
