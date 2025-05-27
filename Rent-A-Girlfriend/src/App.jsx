@@ -4,7 +4,7 @@ import Login from "../frontend/src/components/auth/Login";
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-indigo-100 to-white">
+    <div className="w-full min-h-screen bg-gradient-to-br from-slate-700 to-zinc-900">
       <Login />
     </div>
   );
